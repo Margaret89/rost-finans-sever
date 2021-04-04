@@ -1,0 +1,73 @@
+/*-------------- contact-list -----------------*/
+.contact-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-left: 40px;
+
+	&__item{
+		display: flex;
+		width: calc(50% - 30px);
+		margin: 15px;
+	}
+
+	&__icon{
+		flex: 0 0 30px;
+		margin-right: 10px;
+
+		.icon{margin-top: -7px;}
+	}
+
+	&__label{
+		@include font(normal, bold, 1.6rem, 1.2, $color-text);
+		margin-bottom: 11px;
+	}
+
+	&__text{
+		@include font(normal, 300, 1.6rem, 1.625, $color-text);
+	}
+}
+
+.contact-path{
+	@include font(normal, 300, 1.6rem, 1.625, $color-text);
+	align-items: flex-end;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__icon{
+		margin-right: 10px;
+		.icon{margin-top: -3px;}
+	}
+
+	&__text{margin-right: 15px;}
+
+	&__distance{
+		@include font(normal, 300, 1.6rem, 1.625, #fdbab2);
+		margin-right: 25px;
+
+		.icon{
+			fill: #fdbab2;
+			margin-right: 7px;
+		}
+	}
+
+	&__num{
+		font-size: 1.4rem;
+		position: relative;
+		padding-right: 20px;
+	}
+
+	&__num::after{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6px 3px 0 3px;
+		border-color: $color-text transparent transparent transparent;
+		position: absolute;
+		@include top-center;
+		right: 0;
+	}
+}

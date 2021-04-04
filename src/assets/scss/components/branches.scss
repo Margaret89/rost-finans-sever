@@ -1,0 +1,61 @@
+/*-------------- branches -----------------*/
+.branches-wrap{
+	margin-top: 125px;
+
+	&__content{
+		position: relative;
+		padding: 94px 76px 10px;
+	}
+
+	&__content::before{
+		content: '';
+		display: inline-block;
+		width: 2000px;
+		height: calc(100% - 50px);
+		background: $color-light-blue;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__content::after{
+		content: '';
+		display: inline-block;
+		width: 110px;
+		height: 158px;
+		background: url(/assets/img/icon-branche.svg) center no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: 85px;
+	}
+
+	h1, .h1, h2, .h2{position: relative;}
+}
+
+.branches{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&__item{
+		display: inline-block;
+		width: 480px;
+		height: 318px;
+		margin: 20px 40px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__img{
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		transition: transform 0.2s ease 0s;
+	}
+
+	&__item:hover &__img{transform: scale(1.1);}
+}
