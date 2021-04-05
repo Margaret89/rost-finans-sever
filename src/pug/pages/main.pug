@@ -10,7 +10,7 @@ block content
 				.col-12
 					.top-block__content
 						.top-block__main
-							.top-block__info
+							.top-block__info.d-none.d-md-block
 								.top-block__title Займы в&nbsp;Северодвинске
 								.top-block__text
 									p Получить деньги без справок и поручителей легко и просто!
@@ -50,10 +50,20 @@ block content
 										input.btn(type="submit", value="Продолжить")
 
 						.contact
-							#map.map
-							script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+							.map-wrap.js-map-wrap
+								.map-panel.d-md-none
+									.map-panel__content
+										.map-panel__icon
+											img(src="assets/img/icon-map.svg", alt="")
+										.map-panel__text Смотреть на карте
+									.map-panel__arr.js-map-panel-arr
+										+svg('ic-arrow-down','ic-arrow-down', '14', '8')
+
+								.map-wrap__content.js-map-wrap-content
+									#map.map
+								script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
 						
-							.contact-list
+							.contact-list.d-none.d-md-flex
 								.contact-list__item
 									.contact-list__icon
 										+svg('ic-address','ic-address', '27', '33')
@@ -75,6 +85,10 @@ block content
 
 												span.contact-path__num 4
 
+
+						.top-block__info.d-md-none
+							.top-block__title Займы в&nbsp;Северодвинске
+							
 	section.branches-wrap
 		.container
 			.row
@@ -174,7 +188,7 @@ block content
 
 					.review-slider__text= item.text
 
-	section.faq-wrap
+	section.faq-wrap.last-elem
 		.container.container_indent
 			.row
 				.col-12

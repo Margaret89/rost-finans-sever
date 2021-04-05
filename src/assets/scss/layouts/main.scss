@@ -210,7 +210,14 @@ button.btn:hover{
 	}
 }
 
-
+@media (max-width: 991px) {
+	h1, .h1{font-size: 3.2rem; margin-bottom: 6rem;}
+	h2, .h2{font-size: 2.4rem;}
+	h3, .h3{font-size: 2rem;}
+	h4, .h4{font-size: 1.8rem;}
+	h5, .h5{font-size: 1.6rem;}
+	.bg-content{padding: 60px 0 55px;}
+}
 
 @media (max-width: 767px) {
 	body{
@@ -225,6 +232,8 @@ button.btn:hover{
 	}
 
 	main{padding-bottom: 30px;}
+	.last-elem{margin-bottom: -30px;}
+	.bg-content{padding: 55px 0;}
 
 	.btn,
 	input[type="submit"].btn,
@@ -233,28 +242,30 @@ button.btn:hover{
 		line-height: 3.8rem;
 	}
 
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5{text-transform: none;}
+
 	h1, .h1{
-		font-size: 2.4rem;
+		font-size: 3rem;
 		line-height: 1.2;
 		margin-bottom: 3rem;
 	}
 
 	h2, .h2{
 		font-size: 2rem;
-		line-height: 1.2;
-		margin-bottom: 2rem;
+		margin-bottom: 1.6rem;
 	}
 
 	h3, .h3{
 		font-size: 1.6rem;
-		line-height: 1.2;
-		margin-bottom: 2rem;
+		margin-bottom: 1.6rem;
 	}
 
 	h4, .h4{font-size: 1.5rem;}
 	h5, .h5{font-size: 1.4rem;}
 
-	p{margin-bottom: 3rem;}
+	p{margin-bottom: 2rem;}
 
-	p + .h2, p + .h3, p + h2, p + h3{margin-top: 3rem;}
+	p + .h2, p + .h3, p + h2, p + h3{margin-top: 2rem;}
+	p + ul, p + ol{margin-top: 3.2rem;}
+	li{margin-bottom: 9px;}
 }

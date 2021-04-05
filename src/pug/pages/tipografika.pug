@@ -79,16 +79,17 @@ block content
 				br
 				br
 				.h2 Раскрывающийся блок
-				.unwrap-block.js-unwrap-block
-					.unwrap-block__head.js-unwrap-head
-						.unwrap-block__title Вы можете получить кредит, если
-						.unwrap-block__btn.js-unwrap-block-btn
-							+svg('ic-plus','ic-plus', '18', '18')
-							+svg('ic-minus','ic-minus', '18', '2')
+				.bg-blue(style="padding: 20px;")
+					.unwrap-block.js-unwrap-block
+						.unwrap-block__head.js-unwrap-head
+							.unwrap-block__title Вы можете получить кредит, если
+							.unwrap-block__btn.js-unwrap-block-btn
+								+svg('ic-plus','ic-plus', '18', '18')
+								+svg('ic-minus','ic-minus', '18', '2')
 
-					.unwrap-block__content.js-unwrap-content
-						.unwrap-block__subtitle Ответ:
-						p Единственно верное решение материальных проблем – восполнить нехватку денежных средств. Проблемы бывают микро и макро масштаба. Проверенный план действий, разработанный специалистами компании, помогает устранить трудности, превращая их в возможности. «Центрофинанс» предлагает несколько вариантов микрозаймов, применимых для конкретной финансовой задачи
+						.unwrap-block__content.js-unwrap-content
+							.unwrap-block__subtitle Ответ:
+							p Единственно верное решение материальных проблем – восполнить нехватку денежных средств. Проблемы бывают микро и макро масштаба. Проверенный план действий, разработанный специалистами компании, помогает устранить трудности, превращая их в возможности. «Центрофинанс» предлагает несколько вариантов микрозаймов, применимых для конкретной финансовой задачи
 
 				
 				br
@@ -134,6 +135,11 @@ block content
 
 					.type-icon__item
 						.type-icon__img
+							+svg('ic-arrow-down','ic-arrow-down', '14', '8')
+						.type-icon__name ic-arrow-down
+
+					.type-icon__item
+						.type-icon__img
 							+svg('ic-arrow-left','ic-arrow-left', '8', '14')
 						.type-icon__name ic-arrow-left
 
@@ -162,35 +168,7 @@ block content
 							+svg('ic-plus','ic-plus', '18', '18')
 						.type-icon__name ic-plus
 
-					
-
-				//- 	.type-icon__item
-				//- 		.type-icon__img
-				//- 			+svg('ic-compass','ic-compass', '30', '30')
-				//- 		.type-icon__name ic-compass
-
-				//- 	.type-icon__item
-				//- 		.type-icon__img
-				//- 			+svg('ic-copy','ic-copy', '21', '28')
-				//- 		.type-icon__name ic-copy
-
-				//- 	.type-icon__item
-				//- 		.type-icon__img
-				//- 			+svg('ic-arrow','ic-arrow', '37', '14')
-				//- 		.type-icon__name ic-arrow
-
-				
-
-					
-
-				//- 	.type-icon__item
-				//- 		.type-icon__img
-				//- 			+svg('ic-arrow-down','ic-arrow-down', '14', '8')
-				//- 		.type-icon__name ic-arrow-down
-
-					
-
-				//- 	.type-icon__item
-				//- 		.type-icon__img
-				//- 			+svg('ic-close','ic-close', '12', '12')
-				//- 		.type-icon__name ic-close
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-close','ic-close', '12', '12')
+						.type-icon__name ic-close

@@ -55,8 +55,25 @@
 	}
 }
 
+@media (max-width: 1239px) {
+	.mark-wrap{
+		padding: 40px 0;
+		background-size: cover;
+	}
+}
+
+@media (max-width: 991px) {
+	.mark-wrap{margin: 80px 0;}
+}
+
 @media (max-width: 767px) {
-	.mark-wrap{margin: 40px 0;}
+	.mark-wrap{
+		margin: 40px 0;
+		padding-top: 56px;
+		margin-bottom: 0;
+
+		.h1, h1, .h2, h2{margin-bottom: 30px;}
+	}
 
 	.mark{
 		height: auto;

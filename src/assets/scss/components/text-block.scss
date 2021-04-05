@@ -1,7 +1,18 @@
 /*-------------- text-block -----------------*/
 .text-block-wrap{margin-top: 110px;}
 
-// @media (max-width: 767px) {
-// 	.text-block-wrap{margin: 35px 0;}
-// 	.text-block{padding: 40px 18px;}
-// }
+@media (max-width: 1239px) {
+	.top-block{
+		&__title{font-size: 5rem;}
+		&__text{font-size: 1.8rem;}
+	}
+}
+
+@media (max-width: 991px) {
+	.text-block-wrap{margin-top: 80px;}
+}
+
+@media (max-width: 767px) {
+	.text-block-wrap{margin: 0;}
+	// .text-block{padding: 40px 18px;}
+}
