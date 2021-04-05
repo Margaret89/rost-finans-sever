@@ -46,16 +46,17 @@ h5,.h5
 h1,.h1{
 	font-size: 4rem;
 	text-transform: uppercase;
-	margin-bottom: 4rem;
+	margin-bottom: 7.8rem;
 }
 
 h2,.h2{
 	font-size: 3rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 h3,.h3{
 	font-size: 2rem;
+	letter-spacing: -0.3px;
 	margin-bottom: 2rem;
 }
 
@@ -71,8 +72,8 @@ h5,.h5{
 
 ul, ol{list-style-position: inside;}
 
-p+h2, p+.h2{margin-top: 5.8rem;}
-p+h3, p+.h3{margin-top: 5.8rem;}
+p+h2, p+.h2{margin-top: 4.2rem;}
+p+h3, p+.h3{margin-top: 4.2rem;}
 
 ul li{
 	position: relative;
@@ -85,12 +86,15 @@ ul li{
 		width: 4px;
 		height: 4px;
 		border-radius: 50%;
-		background: $color-red;
+		background: $color-text;
 		margin-right: 10px;
 	}
 }
 
-li{margin-bottom: 12px;}
+li{
+	font-weight: 600;
+	margin-bottom: 12px;
+}
 
 .wrapper{
 	display: flex;
@@ -98,12 +102,20 @@ li{margin-bottom: 12px;}
 	min-height: 100vh;
 	width: 100%;
 	margin: 0 auto;
+	overflow: hidden;
+}
+
+.container_indent{
+	padding-left: 95px;
+	padding-right: 95px;
 }
 
 main{
 	flex: 1 1 auto;
-	padding-bottom: 76px;
+	padding-bottom: 80px;
 }
+
+.last-elem{margin-bottom: -80px;}
 
 .btn,
 input[type="submit"].btn,
@@ -147,6 +159,58 @@ button.btn:hover{
 .text-bold {font-weight: 700 !important;}
 
 .bg-light-blue{background: #f9f8ff;}
+.bg-blue{background: $color-blue; color: #fff;}
+
+.bg-content{
+	position: relative;
+	padding: 90px 0 85px;
+}
+
+.bg-light-blue-left{
+	position: relative;
+	padding-right: 80px;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 2000px;
+		height: 100%;
+		background: $color-light-blue;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.bg-light-blue-right{
+	position: relative;
+	padding-left: 80px;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 2000px;
+		height: 100%;
+		background: $color-light-blue;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.container_indent{
+	.bg-light-blue-left{
+		padding-right: 0;
+		&::before{right: -80px;}
+	}
+
+	.bg-light-blue-right{
+		padding-left: 0;
+		&::before{left: -80px;}
+	}
+}
+
+
 
 @media (max-width: 767px) {
 	body{

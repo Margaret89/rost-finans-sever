@@ -40,6 +40,12 @@
 
 	.form-calc{margin-top: 123px;}
 	.map{margin-bottom: 50px;}
+
+	.contact{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
 }
 
 // @media (max-width: 991px) {

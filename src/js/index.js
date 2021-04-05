@@ -89,3 +89,61 @@ if ($('#map').length) {
 			myMap.geoObjects.add(myPlacemark);
 	}
 }
+
+// review slider
+if($('.js-review-slider').length){
+	$('.js-review-slider').each(function(){
+		if($(this).find('.js-review-slider-item').length > 3){
+			$(this).addClass('more-slide');
+		}
+	});
+	
+
+	$('.js-review-slider').slick({
+		centerMode: true,
+		centerPadding: 'calc(50% - 615px)',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		appendArrows: $('.js-review-slider-arr'),
+		prevArrow: '<button id="prev" type="button" class="btn-arr"><svg class="icon ic-arrow-left" width="8" height="14"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
+		nextArrow: '<button id="next" type="button" class="btn-arr"><svg class="icon ic-arrow-right" width="8" height="14"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 1470,
+				settings: {
+					centerPadding: 'calc(50% - 320px)',
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					centerPadding: 'calc(50% - 360px)',
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					centerPadding: '40px',
+					slidesToShow: 1,
+				}
+			},
+		]
+	});
+}
+
+// unwrap block
+if($('.js-unwrap-block').length){
+	$('.js-unwrap-block-btn').on('click',function(event){
+		event.preventDefault();
+		var $parent = $(this).parents('.js-unwrap-block');
+		
+		$parent.toggleClass('opened');
+		if($parent.hasClass('opened')){
+			$parent.children('.js-unwrap-content').slideDown(400);
+		}else{
+			$parent.children('.js-unwrap-content').slideUp(400);
+		}
+	});
+}
