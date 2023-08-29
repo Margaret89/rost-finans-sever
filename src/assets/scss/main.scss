@@ -26,8 +26,24 @@
 @import "utils/fonts";
 @import "utils/reset";
 
-@import "layouts/*";
-@import "components/*";
+@import "layouts/main";
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "components/branches.scss";
+@import "components/contact-list.scss";
+@import "components/faq.scss";
+@import "components/form-calc.scss";
+@import "components/icons.scss";
+@import "components/map.scss";
+@import "components/mark.scss";
+@import "components/move-up.scss";
+@import "components/range-slider.scss";
+@import "components/riview-slider.scss";
+@import "components/text-block.scss";
+@import "components/top-block.scss";
+@import "components/type-icon.scss";
+@import "components/unwrap-block.scss";
 
 
 
