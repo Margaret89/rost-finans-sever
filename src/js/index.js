@@ -37,6 +37,8 @@ if($('.js-range-input').length){
 		$parent.find('.js-range-min').text(numMin)
 		$parent.find('.js-range-max').text(numMax)
 	});
+
+	calcPrice();
 	
 
 	$('.js-range-input').on("slide", function(e) {
@@ -47,6 +49,8 @@ if($('.js-range-input').length){
 		}else{
 			$rangeVal.html('<span class="range__val-num">'+ e.value + '</span> ' + $rangeVal.data('text'));
 		}
+
+		calcPrice();
 	});
 
 	function nameDay(val) {
@@ -60,6 +64,16 @@ if($('.js-range-input').length){
 			if (lastFigure > 1 && lastFigure < 5) return 'дня';
 			if (lastFigure == 0 || lastFigure >= 5) return 'дней';
 		}
+	}
+
+	function calcPrice() {
+		//сумма займа + сумма займа * (0,01 * количество дней)
+		let priceAmount = Number($('.js-range-input[data-event="amount"]').val());
+		let pricePeriod = Number($('.js-range-input[data-event="period"]').val());
+		let priceAll = Math.round(priceAmount + priceAmount * (0.01 * pricePeriod));
+
+		priceAll = priceAll.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");// Добавляем пробелы в число
+		$('.js-form-calc-res-price').text(priceAll);
 	}
 }
 
